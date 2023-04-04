@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>URL Decoder</title>
+ <style type="text/css">
+  body {
+   font-family: Arial, sans-serif;
+   background-color: #f2f2f2;
+  }
+  h1 {
+   text-align: center;
+   margin-top: 50px;
+   color: #333;
+  }
+  form {
+   margin-top: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
+  input[type="text"] {
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+   box-shadow: 0px 0px 5px #ccc;
+   width: 80%;
+   margin-bottom: 20px;
+  }
+  button[type="submit"] {
+   padding: 10px 20px;
+   background-color: #333;
+   color: #fff;
+   border-radius: 5px;
+   border:none; 
+            cursor:pointer; 
+            font-size :16px; 
+            font-weight:bold; 
+            margin-bottom :20px; 
+            transition :all ease-in-out .3s; 
+        } 
+
+        button[type="submit"]:hover { 
+            background-color:#fff ; 
+            color:#333 ; 
+        } 
+
+        textarea { 
+            padding :10px ; 
+            width :80% ; 
+            height :200px ;  
+            border-radius :5px ;  
+            border:none ;  
+            box-shadow :0px 0px 5px #ccc ;  
+        } 
+
+        p {  
+           margin-top :20px ;  
+           text-align:center ;
+           color:#333 ;
+           font-size :18 px ;
+           font-weight:bold ;
+       }
+    </style> 
+
+</head>
+
+<body>  
+
+    <h1>URL Decoder</h1> 
+
+    <form onsubmit="decodeURL(event)"> 
+        <input type="text" id="url" placeholder="Enter URL to decode"> 
+        <button type="submit">Decode</button> 
+    </form> 
+
+    <p id="result"></p> 
+
+    <script type="text/javascript"> 
+        function decodeURL(event) { 
+            event.preventDefault(); 
+            var url = document.getElementById("url").value; 
+            var decodedURL = decodeURIComponent(url); 
+            document.getElementById("result").innerHTML = decodedURL; 
+        } 
+    </script> 
+
+</body>
+</html>
